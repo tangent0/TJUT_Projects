@@ -1,0 +1,1 @@
+sqlldr userid=ora00176/RFy7qP control=dept.ctl log=dept.log

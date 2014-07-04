@@ -1,0 +1,16 @@
+[ex00176@dimensxcn1 ~]$ ./compbasec | ./compbases
+[ex00176@dimensxcn1 ~]$ ./server_ftp 5176
+The port number used by the tcp socket is #5176
+server ready for connection
+
+Client connection
+=====>test2
+End of client file transfer
+File test2 has 97350 octets
+
+Client connection
+=====>test3
+End of client file transfer
+File test3 has 87884 octets
+
+[ex00176@dimensxcn1 ~]$

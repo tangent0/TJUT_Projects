@@ -1,0 +1,8 @@
+
+SQL*Loader: Release 11.2.0.3.0 - Production on Sun Jun 2 00:16:29 2013
+
+Copyright (c) 1982, 2011, Oracle and/or its affiliates.  All rights reserved.
+
+SQL*Loader-500: Unable to open file (sqlldr_cretab.ctl)
+SQL*Loader-553: file not found
+SQL*Loader-509: System error: No such file or directory

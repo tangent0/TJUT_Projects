@@ -1,0 +1,1 @@
+sqlldr userid=ora00176/RFy7qP control=cretab2.ctl log=cretab2.log

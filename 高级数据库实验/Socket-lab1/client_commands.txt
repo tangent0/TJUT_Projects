@@ -1,0 +1,35 @@
+[ex00176@dimensxcn1 ~]$ ./client_ftp dimensxcn1 5176
+Enter the name of the local file to transfer:
+tp2dat2
+Enter the given name of this file on the remote server:
+test2
+File tp2dat2 had 3033 lines and a total of 97350 octets
+Transfer rate: 23767.08984Ko/sec                 Transfer TCP dalay :   4.00000 msec
+End of client program
+
+[ex00176@dimensxcn1 ~]$ ./client_ftp dimensxcn1 5176
+Enter the name of the local file to transfer:
+tp2dat3
+Enter the given name of this file on the remote server:
+test3
+File tp2dat3 had 692 lines and a total of 87884 octets
+Transfer rate: 85824.21875Ko/sec                 Transfer TCP dalay :   1.00000 msec
+End of client program
+
+[ex00176@dimensxcn1 ~]$ ls -ls
+total 508
+ 16 -rwx--x--x+ 1 ex00176 ex00176 10834 Oct 12 22:10 client_ftp
+ 12 -rw---x---+ 1 ex00176 ex00176  6824 Oct 12 21:59 client_ftp.c
+  8 -rwx------+ 1 ex00176 ex00176    41 Oct 11 13:13 compbasec
+  8 -rwx------+ 1 ex00176 ex00176    30 Oct 11 11:33 compbases
+  8 -rwx------+ 1 ex00176 ex00176    16 Oct  9 21:27 compile1
+ 12 -rwx--x--x+ 1 ex00176 ex00176  6725 Oct  9 21:30 ex1
+  8 -rw-------+ 1 ex00176 ex00176   115 Oct  9 21:22 ex1.c
+  8 drwxr-xr-x+ 3 ex00176 ex00176  4096 Oct  9 12:40 public_html
+ 16 -rwx--x--x+ 1 ex00176 ex00176 10025 Oct 12 22:10 server_ftp
+ 12 -rw---x---+ 1 ex00176 ex00176  6604 Oct 12 21:59 server_ftp.c
+104 -rw-------+ 1 ex00176 ex00176 97350 Oct 12 22:12 test2
+ 96 -rw-------+ 1 ex00176 ex00176 87884 Oct 12 22:12 test3
+104 -rw---x---+ 1 ex00176 ex00176 97415 Oct  9 22:05 tp2dat2
+ 96 -rw---x---+ 1 ex00176 ex00176 87969 Oct  9 22:05 tp2dat3
+[ex00176@dimensxcn1 ~]$

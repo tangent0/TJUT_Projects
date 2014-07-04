@@ -1,0 +1,10 @@
+./compbasec | ./compbases
+./server_ftp 5176
+
+./client_ftp dimensxcn1 5176
+tp2dat2
+test2
+
+./client_ftp dimensxcn1 5176
+tp2dat3
+test3

@@ -1,0 +1,48 @@
+
+SQL*Loader: Release 11.2.0.3.0 - Production on Mon Jun 10 03:30:30 2013
+
+Copyright (c) 1982, 2011, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   responsible.ctl
+Data File:      responsible.dat
+  Bad File:     responsible.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table RESPONSIBLE, loaded from every logical record.
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+EMP_NUM                             FIRST     *   ,       CHARACTER            
+PART_NUMBER                          NEXT     *   ,       CHARACTER            
+
+
+Table RESPONSIBLE:
+  10 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                  33024 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:            10
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Mon Jun 10 03:30:30 2013
+Run ended on Mon Jun 10 03:30:30 2013
+
+Elapsed time was:     00:00:00.06
+CPU time was:         00:00:00.01
