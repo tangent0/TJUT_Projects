@@ -1,0 +1,17 @@
+
+DIAGNOSTIC REPORT                       
+PATIENT-NAME:                           Zhou                                    
+LUNG-INFECTION:                         1                                       
+TEMPERATURE:                            0                                       
+SNIFFLES:                               1                                       
+SORE-THROAT:                            0                                       
+DIAGNOSTIC:                             COLD                                    
+-----------------------------------     
+DIAGNOSTIC REPORT                       
+PATIENT-NAME:                           Pei                                     
+LUNG-INFECTION:                         1                                       
+TEMPERATURE:                            0                                       
+SNIFFLES:                               0                                       
+SORE-THROAT:                            1                                       
+DIAGNOSTIC:                             COLD                                    
+-----------------------------------     

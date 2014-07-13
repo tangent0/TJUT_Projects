@@ -1,0 +1,150 @@
+       IDENTIFICATION DIVISION.
+         PROGRAM-ID.DIAGNOSTIC-REPORT.
+
+       ENVIRONMENT DIVISION.
+         INPUT-OUTPUT SECTION.
+         FILE-CONTROL.
+         SELECT PATIENT ASSIGN TO "PATIENT.TXT"
+         ORGANIZATION IS LINE SEQUENTIAL
+         ACCESS MODE IS SEQUENTIAL.
+
+       DATA DIVISION.
+         FILE SECTION.
+           FD PATIENT.
+             01 PATIENT-RECORD PIC X(40).
+
+         WORKING-STORAGE SECTION.
+           77 PATIENT-NAME PIC X(20) VALUE SPACES.
+
+           77 LUNG-INFECTION PIC 9 VALUE 0.
+           77 TEMPERATURE PIC 9 VALUE 0.
+           77 SNIFFLES PIC 9 VALUE 0.
+           77 SORE-THROAT PIC 9 VALUE 0.
+
+           77 DIAGNOSTIC  PIC X(10) VALUES SPACES.
+
+           77 LABEL-OK PIC X VALUE ' '.
+           77 ANOTHER-PATIENT PIC X VALUE ' '.
+
+         SCREEN SECTION.
+           01 SCREEN-1
+              BLANK SCREEN
+              FOREGROUND-COLOR 1
+      *                      BLUE
+              BACKGROUND-COLOR 7.
+      *                      WHITE
+             10 LINE 3 COLUMN 14 VALUE     "PATIENT-NAME:" .
+             10        COLUMN + 4 PIC X(20) TO PATIENT-NAME AUTO.
+
+             10 LINE + 4 COLUMN 12 VALUE "LUNG-INFECTION:" .
+             10 COLUMN + 4 PIC 9 TO LUNG-INFECTION AUTO.
+             10          COLUMN + 20 VALUE "1 = PRESENT".
+             10 LINE + 1 COLUMN - 10 VALUE "0 = ABSENT".
+
+             10 LINE + 2 COLUMN 15 VALUE    "TEMPERATURE:".
+             10          COLUMN + 4 PIC 9 TO TEMPERATURE AUTO.
+             10          COLUMN + 20 VALUE "1 = PRESENT"  .
+             10 LINE + 1 COLUMN - 10 VALUE "0 = ABSENT".
+
+             10 LINE + 2 COLUMN 18 VALUE       "SNIFFLES:".
+             10          COLUMN + 4 PIC 9 TO SNIFFLES AUTO.
+             10          COLUMN + 20 VALUE "1 = PRESENT"  .
+             10 LINE + 1 COLUMN - 10 VALUE "0 = ABSENT".
+
+             10 LINE + 2 COLUMN 15 VALUE    "SORE-THROAT:".
+             10          COLUMN + 4 PIC 9 TO SORE-THROAT AUTO.
+             10          COLUMN + 20 VALUE "1 = PRESENT"  .
+             10 LINE + 1 COLUMN - 10 VALUE "0 = ABSENT".
+
+           01 SCREEN-2.
+             05 BLANK SCREEN
+                FOREGROUND-COLOR 1
+                BACKGROUND-COLOR 7
+                REVERSE-VIDEO.
+               10 LINE  10 COLUMN   5 VALUE "PATIENT-NAME:".
+               10          COLUMN + 5 PIC X(20) FROM PATIENT-NAME.
+
+               10 LINE + 2 COLUMN  5 VALUE "LUNG-INFECTION:".
+               10          COLUMN + 3 PIC 9 FROM LUNG-INFECTION.
+
+               10 LINE + 1 COLUMN  5 VALUE "TEMPERATURE:".
+               10          COLUMN + 6 PIC 9 FROM TEMPERATURE.
+
+               10 LINE + 1 COLUMN  5 VALUE "SNIFFLES:".
+               10          COLUMN + 9 PIC 9 FROM SNIFFLES.
+
+               10 LINE + 1 COLUMN  5 VALUE "SORE-THROAT:".
+               10          COLUMN + 6 PIC 9 FROM SORE-THROAT.
+
+               10 LINE + 2 COLUMN + 0 VALUE "IS LABEL OK?(Y/N)" .
+             05 PIC X TO LABEL-OK AUTO.
+
+           01 SCREEN-3.
+             05 BLANK SCREEN
+                FOREGROUND-COLOR 12
+      *                     LIGHT RED
+                BACKGROUND-COLOR 7.
+      *                      WHITE
+             10 LINE 10 COLUMN 11 VALUE    "DO YOU WANT TO ENTER ANOTHER
+      -      "PATIENT? (Y/N)".
+             05 FOREGROUND-COLOR 1
+                BACKGROUND-COLOR 7.
+               10 PIC X TO ANOTHER-PATIENT AUTO.
+
+       PROCEDURE DIVISION.
+         OPEN OUTPUT PATIENT.
+         WRITE PATIENT-RECORD FROM 'DIAGNOSTIC REPORT'.
+         WRITE PATIENT-RECORD FROM ' '.
+
+         PERFORM UNTIL ANOTHER-PATIENT<>'Y' AND ANOTHER-PATIENT<>'y'
+                 AND ANOTHER-PATIENT<>' '
+           DISPLAY SCREEN-1 ACCEPT SCREEN-1
+           DISPLAY SCREEN-2 ACCEPT SCREEN-2
+             IF LABEL-OK='Y' OR LABEL-OK='y' OR LABEL-OK=' '
+               PERFORM 100-DIAGNOSTIC
+               PERFORM 200-WRITE-PATIRNT-RECORD
+               DISPLAY SCREEN-3 ACCEPT SCREEN-3
+             END-IF
+         END-PERFORM.
+         CLOSE PATIENT.
+       STOP RUN.
+
+       100-DIAGNOSTIC.
+         IF LUNG-INFECTION=1 AND TEMPERATURE=1
+           THEN
+             MOVE 'PNEUMONIA' TO DIAGNOSTIC
+           ELSE
+             IF(LUNG-INFECTION+TEMPERATURE+SNIFFLES+SORE-THROAT>=2)
+               THEN
+                 MOVE 'COLD...' TO DIAGNOSTIC
+               ELSE
+                 MOVE 'OK!' TO DIAGNOSTIC
+             END-IF
+         END-IF.
+
+       200-WRITE-PATIRNT-RECORD.
+         WRITE PATIENT-RECORD FROM '--------------------'.
+
+         WRITE PATIENT-RECORD FROM "PATIENT-NAME:"
+           AFTER ADVANCING 0 LINE.
+         WRITE PATIENT-RECORD FROM PATIENT-NAME.
+
+         WRITE PATIENT-RECORD FROM "LUNG-INFECTION:"
+           AFTER ADVANCING 0 LINE.
+         WRITE PATIENT-RECORD FROM LUNG-INFECTION.
+
+         WRITE PATIENT-RECORD FROM "TEMPERATURE:"
+           AFTER ADVANCING 0 LINE.
+         WRITE PATIENT-RECORD FROM TEMPERATURE.
+
+         WRITE PATIENT-RECORD FROM "SNIFFLES:"
+           AFTER ADVANCING 0 LINE.
+         WRITE PATIENT-RECORD FROM SNIFFLES.
+
+         WRITE PATIENT-RECORD FROM "SORE-THROAT:"
+           AFTER ADVANCING 0 LINE.
+         WRITE PATIENT-RECORD FROM SORE-THROAT.
+
+         WRITE PATIENT-RECORD FROM "DIAGNOSTIC:"
+           AFTER ADVANCING 0 LINE.
+         WRITE PATIENT-RECORD FROM DIAGNOSTIC

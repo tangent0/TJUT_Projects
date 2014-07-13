@@ -1,0 +1,74 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+     <head> <title> order_some_books.html </title>
+            <!-- Script for the event handlers -->
+     <style type="text/css">
+           div{position:relative; float:left; border:soild 1px black;}
+           #marquee_space td{border-collapse:collapse; border:solid 1px black;}
+           img{width:100px; height:100px;}
+     </style>
+     <script type = "text/javascript"  src = "order_some_books.js" ></script>
+     </head>
+
+<body>
+    <marquee behavior="scroll" bgcolor="white" direction="left"
+             height="170" width="600" hspace="1" vspace="1"
+             scrollamount="10" scrolldelay="150" >
+
+      <div>
+          <table>
+		     <tr><td><img src="../../css/images/bg.jpg" alt="bg.jpg"/></td></tr>
+             <tr><td>the_universe</td></tr> 
+		     <tr><td>0.02yuan each</td></tr>
+          </table> 
+      </div>
+
+      <div>
+         <table>
+		     <tr><td><img src="../../css/images/see_you.jpg" alt="see_you.jpg"/></td></tr>
+             <tr><td>see_you,pluto</td></tr> 
+			 <tr><td>0.01yuan each</td></tr>
+         </table>
+      </div>
+
+      <div>
+         <table>
+		     <tr><td><img src="../../css/images/glow.png" alt="glow.png"/></td></tr>
+             <tr><td>the_glory_day</td></tr> 
+			 <tr><td>0.03yuan each</td></tr>
+         </table>
+      </div>      
+	  </marquee>
+    <hr />
+
+    <form action="" method="post" id="order_form">
+      <h3> Book Order Form </h3>	  
+	  <table border="border">
+          <tr><th>Name</th> <td><input type = "text"  id = "custName" name = "custName" value="Aa,Aa,Aa"/>(last name, first name, middle initial) </td> </tr>
+          <tr><th>Phone</th> <td><input type = "text"  id = "phone" name = "phone" value="111-111-1111"/> (ddd-ddd-dddd) </td> </tr>
+	  </table>
+         <hr />
+      <!-- A bordered table for item orders -->
+      <table border = "border">
+          <!-- First, the column headings --> 
+        <tr><th> Product Name </th><th> Price </th> <th> Quantity </th></tr>
+          <!-- Now, the table data entries -->
+        <tr><th> the_universe </th> <td> 0.01 RMB</td><td> <input type = "text"  id = "the_universe"  name = "the_universe" size ="2" value="0"/> </td> </tr>
+        <tr><th> see_you,pluto </th> <td> 0.02 RMB </td><td> <input type = "text"  id = "see_you_pluto" name = "see_you_pluto" size = "2" value="0"/> </td> </tr> 
+        <tr><th> the_glory_day </th> <td> 0.03 RMB </td><td> <input type = "text"  id = "the_glory_day" name = "the_glory_day" size = "2" value="0"/> </td> </tr>
+      </table>
+          <!-- Button for precomputation of the total cost -->
+      <p> <input type = "button"  value = "Total Cost" onclick = "computeCost();" /> 
+	      <input type = "text"  size = "5"  id = "cost"  onfocus = "this.blur();" /> 
+	  </p>
+          <!-- The submit and reset buttons -->
+      <p> <input type = "submit"  value = "Submit Order" onclick="if(judge_validator())getElementById('order_form').action='../../php/order.php'"/> 
+         <input type = "reset"  value = "Clear Order Form" />
+	  </p>
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,76 @@
+                       A L P H A  D E P A R T M E N T  S T O R E   PAGE 1
+
+                          PAYROLL FOR THE WEEK OF11/10/2011
+
+      DEPARTMENT -01
+
+      TERRITORY -01
+
+         EMPLOYEE NUMBER         EMPLOYEE NAME                 ANNUAL SALARY
+
+                    001          PAUL NEWMAN                      $31,000.00
+
+                    005          ROBERT REDFORD                   $42,000.00
+
+
+                              TOTAL SALARY FOR TERRITORY IS       $73,000.00
+                       A L P H A  D E P A R T M E N T  S T O R E   PAGE 2
+
+                          PAYROLL FOR THE WEEK OF11/10/2011
+
+      DEPARTMENT -01
+
+      TERRITORY -02
+
+         EMPLOYEE NUMBER         EMPLOYEE NAME                 ANNUAL SALARY
+
+                    007          DIANA ROSS                       $41,000.00
+
+                    009          BILL SMITH                       $15,000.00
+
+
+                              TOTAL SALARY FOR TERRITORY IS       $56,000.00
+
+
+                                TOTAL SALARY FOR DEPARTMENT IS      $129,000.00
+                       A L P H A  D E P A R T M E N T  S T O R E   PAGE 3
+
+                          PAYROLL FOR THE WEEK OF11/10/2011
+
+      DEPARTMENT -02
+
+      TERRITORY -07
+
+         EMPLOYEE NUMBER         EMPLOYEE NAME                 ANNUAL SALARY
+
+                    023          JOHN DOE                         $27,000.00
+
+                    036          JOHN BROWN                       $52,000.00
+
+
+                              TOTAL SALARY FOR TERRITORY IS       $79,000.00
+
+
+                                TOTAL SALARY FOR DEPARTMENT IS       $79,000.00
+                       A L P H A  D E P A R T M E N T  S T O R E   PAGE 4
+
+                          PAYROLL FOR THE WEEK OF11/10/2011
+
+      DEPARTMENT -03
+
+      TERRITORY -09
+
+         EMPLOYEE NUMBER         EMPLOYEE NAME                 ANNUAL SALARY
+
+                    054          NANCY STERN                      $99,999.00
+
+
+                              TOTAL SALARY FOR TERRITORY IS       $99,999.00
+
+
+                                TOTAL SALARY FOR DEPARTMENT IS       $99,999.00
+
+
+                                         TOTAL OF SALARY IS      $307,999.00
+
+         END OF REPORT

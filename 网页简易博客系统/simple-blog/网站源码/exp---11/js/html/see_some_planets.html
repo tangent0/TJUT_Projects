@@ -1,0 +1,72 @@
+<?xml version = "1.0"  encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+<head><title></title>
+      <style type = "text/css">
+      /* A style for the paragraph of text */
+            img{width:100px; height:100px;}
+            .regtext1 {position:absolute; top:100px; left:100px; z-index:1; background-color:black; color:yellow; width: 100px;} 
+            .regtext2 {position:absolute; top:150px; left:150px; z-index:2; background-color:black; color:yellow; width: 100px;} 
+            .regtext3 {position:absolute; top:200px; left:200px; z-index:3; background-color:black; color:yellow; width: 100px;}           
+            .regtext4 {position:absolute; top:250px; left:250px; z-index:4; background-color:black; color:yellow; width: 100px;} 
+            .regtext5 {position:absolute; top:300px; left:300px; z-index:5; background-color:black; color:  blue; width: 100px;} 
+            .regtext6 {position:absolute; top:350px; left:350px; z-index:6; background-color:black; color:  blue; width: 100px;} 
+            .regtext7 {position:absolute; top:400px; left:400px; z-index:7; background-color:black; color:  blue; width: 100px;} 
+            .regtext8 {position:absolute; top:450px; left:450px; z-index:8; background-color:black; color:  blue; width: 100px;}          
+      </style>
+      <script type = "text/javascript"  src = "see_some_planets.js" ></script>
+</head>
+
+<body style="background-image:F:\wamp2\www\exp---11\css\images\bg.jpg; background-repeat:repeat-x;"onload = "initText()">
+
+     <p><span id = 'theText' style = "position: absolute; left: 100px; top: 0px; font: bold 20pt 'Times Roman';color:blue;" 
+	          onmouseover="this.stop();" onmouseout="this.start();">         
+         The eight planets of the solar system
+     </span>
+	 </p>
+
+     <p class = "regtext1"id="regtext1"onmouseover = "toTop('regtext1');messages(1);" onmouseout = "toRecover('regtext1');messages(0);" >
+       <img src='../../css/images/mercury.jpg'alt='mercury.jpg'></img>
+	       mercury.jpg
+     </p>
+
+     <p class = "regtext2"id="regtext2"onmouseover = "toTop('regtext2');messages(2);"onmouseout = "toRecover('regtext2');messages(0);" >
+       <img src='../../css/images/venus.jpg'alt='venus.jpg'></img>
+	       venus.jpg
+     </p>
+
+     <p class = "regtext3"id="regtext3"onmouseover = "toTop('regtext3');messages(3);"onmouseout = "toRecover('regtext3');messages(0);" >
+	   <img src='../../css/images/earth.jpg' alt='earth.jpg'></img>
+	       earth.jpg
+     </p>
+     <p class = "regtext4"id="regtext4"onmouseover = "toTop('regtext4');messages(4);"onmouseout = "toRecover('regtext4');messages(0);" >
+	   <img src='../../css/images/mars.jpg' alt='mars.jpg'></img>
+	       mars.jpg
+     </p>
+          <p class = "regtext5"id="regtext5"onmouseover = "toTop('regtext5');messages(5);"onmouseout = "toRecover('regtext5');messages(0);" >
+	   <img src='../../css/images/jupiter.jpg' alt='jupiter.jpg'></img>
+	       jupiter.jpg
+     </p>
+          <p class = "regtext6"id="regtext6"onmouseover = "toTop('regtext6');messages(6);"onmouseout = "toRecover('regtext6');messages(0);" >
+	   <img src='../../css/images/saturn.png' alt='saturn.png'></img>
+	       saturn.png
+     </p>
+          <p class = "regtext7"id="regtext7"onmouseover = "toTop('regtext7');messages(7);"onmouseout = "toRecover('regtext7');messages(0);" >
+	   <img src='../../css/images/uranus.png' alt='uranus.png'></img>
+	       uranus.png
+     </p>
+          <p class = "regtext8"id="regtext8"onmouseover = "toTop('regtext8');messages(8);"onmouseout = "toRecover('regtext8');messages(0);" >
+	   <img src='../../css/images/neptune.jpg' alt='neptune.jpg'></img>
+	       neptune.jpg
+     </p>
+     
+     
+    <div style="float:left; position: absolute; top: 150px; left: 500px; ">
+    <span>Ã´—Ùœµ∞À¥Û∫„–«ΩÈ…‹£∫</span> <br />
+    <textarea id = "adviceBox"  rows = "10"  cols = "50">This box provides advice on this page. Put the mouse cursor over any picture to get advice.</textarea>
+</body>
+
+</html>

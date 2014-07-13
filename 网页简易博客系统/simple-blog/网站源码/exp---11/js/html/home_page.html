@@ -1,0 +1,37 @@
+<html>
+<head><title></title>
+  <style type="text/css">
+     table{height:400px; width:400px; border-collapse:collapse; border:thin solid red};
+  </style>
+  <script type="text/javascript" src="home_page.js"></script>
+</head>
+<body style="background-color:transparent">
+<p></p>
+<p>If you haven't registed yet,please registe here.</p>
+<form id="home_page_form" method="post" action="" OnSubmit="return judge();">
+  <table>
+     <tr><td>Please Input your name </td> <td><input type="text" name="name" value="tommy">       </td></tr> 
+     <tr><td>Password               </td> <td><input type="password" name="pwd" value="tommy">    </td></tr>
+     <tr><td>Confirm Password       </td> <td><input type="password" name="confirm" value="tommy"></td></tr>
+     <tr>
+       <td>Gender</td>  
+	   <td>
+         <input type="radio" name="gender" value="male" checked="checked" />Male
+         <input type="radio" name="gender" value="female" />Female
+       </td>
+     </tr>
+     <tr><td>Age</td><td><input type="text" name="age" value="18">                             </td></tr>
+     <tr><td>Email Address</td> <td><input type="text" name="email" value="tommy@tommy.com">                </td></tr>
+     <tr><td colspan=2><input type="checkbox" name="favor[]" checked="checked" value="computer">I like computer         </td></tr>
+     <tr><td colspan=2><input type="checkbox" name="favor[]" checked="checked" value="science">I like science         </td></tr>
+	 <tr><td colspan=2><input type="checkbox" name="favor[]" value="physics">I like physics         </td></tr>
+     <tr><td colspan=2><input type="checkbox" name="favor[]" value="math">I like math         </td></tr>
+     <tr>
+	   <td><input type="submit" value="submit" onclick="getElementById('home_page_form').action='../../php/register.php'"></td>	   
+	   <td><input type="reset" value="reset"></td> 
+	</tr>
+  </table>
+</form>
+
+</body>
+</html>
